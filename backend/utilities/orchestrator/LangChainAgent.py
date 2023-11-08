@@ -84,7 +84,7 @@ class LangChainAgent(OrchestratorBase):
         with get_openai_callback() as cb:
             try:
                 answer = agent_chain.run(user_message)
-                self.log_tokens(prompt_tokens=cb.prompt_tokens, completion_tokens=cb.completion_tokens)
+                #self.log_tokens(prompt_tokens=cb.prompt_tokens, completion_tokens=cb.completion_tokens)
             except Exception as e:
                 answer = str(e)
         try:

@@ -27,7 +27,7 @@ class AzureSearchHelper():
                 type=SearchFieldDataType.String,
             ),
             SearchField(
-                name="content_vector",
+                name="contentVector",
                 type=SearchFieldDataType.Collection(SearchFieldDataType.Single),
                 searchable=True,
                 vector_search_dimensions=len(llm_helper.get_embedding_model().embed_query("Text")),
@@ -90,7 +90,7 @@ class AzureSearchHelper():
                 type=SearchFieldDataType.String,
             ),
             SearchField(
-                name="content_vector",
+                name="contentVector",
                 type=SearchFieldDataType.Collection(SearchFieldDataType.Single),
                 searchable=True,
                 vector_search_dimensions=len(llm_helper.get_embedding_model().embed_query("Text")),
