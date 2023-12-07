@@ -68,6 +68,12 @@ class EnvHelper:
         self.AZURE_CONTENT_SAFETY_KEY = os.getenv('AZURE_CONTENT_SAFETY_KEY', '')
         # Orchestration Settings
         self.ORCHESTRATION_STRATEGY = os.getenv('ORCHESTRATION_STRATEGY', 'openai_function')
+        # Kusto
+        self.KUSTO_UAR_ENDPOINT = os.getenv('KUSTO_UAR_ENDPOINT', '')
+        self.KUSTO_UAR_CLIENT_ID = os.getenv('KUSTO_UAR_CLIENT_ID', '')
+        self.KUSTO_UAR_CLIENT_SECRET = os.getenv('KUSTO_UAR_CLIENT_SECRET', '')
+        self.KUSTO_UAR_APP_ID = os.getenv('KUSTO_UAR_APP_ID', '')
+        self.KUSTO_UAR_DATABASE = os.getenv('KUSTO_UAR_DATABASE', '')
     
     @staticmethod
     def check_env():

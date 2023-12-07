@@ -27,7 +27,7 @@ class QuestionAnswerTool(AnsweringToolBase):
         llm_helper = LLMHelper()
       
         # Retrieve documents as sources
-        sources = self.vector_store.similarity_search(query=question, k=2, search_type="hybrid")
+        sources = self.vector_store.similarity_search(query=question, k=1, search_type="hybrid")
         
         # Generate answer from sources
         answer_generator = LLMChain(llm=llm_helper.get_llm(), prompt=answering_prompt, verbose=self.verbose)
@@ -38,7 +38,6 @@ class QuestionAnswerTool(AnsweringToolBase):
         with get_openai_callback() as cb:
             result = answer_generator({'question': question, 'sources': sources_text})
         answer = result["text"]
-        print(f'result========: {result}')
                     
         # Generate Answer Object
         source_documents = []
