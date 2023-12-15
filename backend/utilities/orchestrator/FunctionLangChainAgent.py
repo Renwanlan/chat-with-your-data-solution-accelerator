@@ -1,5 +1,4 @@
-from langchain.agents import AgentExecutor, XMLAgent, tool, ZeroShotAgent
-from langchain.chat_models import ChatAnthropic
+from langchain.agents import AgentExecutor, tool
 
 from backend.utilities.tools.KustoQueryTool import KustoQueryTool
 from .OrchestratorBase import OrchestratorBase
@@ -12,11 +11,9 @@ from langchain.schema.runnable import RunnablePassthrough
 from langchain.agents.format_scratchpad import format_to_openai_functions
 from langchain.agents.output_parsers import OpenAIFunctionsAgentOutputParser
 from ..parser.OutputParserTool import OutputParserTool
-from ..common.Answer import Answer
 from ..tools.QuestionAnswerTool import QuestionAnswerTool
 from langchain.tools.render import format_tool_to_openai_function
 from pydantic import BaseModel, Field
-from langchain.schema.output_parser import StrOutputParser
 import wikipedia
 
 # Define the input schema

@@ -1,5 +1,4 @@
 from typing import List
-from langchain.docstore.document import Document
 from ..orchestrator import get_orchestrator, OrchestrationSettings, OrchestrationStrategy
 
 class Orchestrator:

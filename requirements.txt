@@ -17,3 +17,5 @@ opencensus-ext-azure==1.1.9
 azure-ai-contentsafety==1.0.0b1
 python-docx==0.8.11
 azure.kusto.data
+wikipedia==1.4.0
+pydantic==1.10.7
